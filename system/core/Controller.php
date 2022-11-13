@@ -101,4 +101,12 @@ class CI_Controller {
 		return self::$instance;
 	}
 
+	public function isLogged(){
+		if ($this->session->userdata('logged') === TRUE){
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 }
